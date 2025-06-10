@@ -12,9 +12,16 @@ export const Home = () => {
             people. I am currently working for TCS in Kolkata, India.
           </p>
         </div>
-        <div class="home-hero__cta">
-          <a href="#projects" class="btn btn--bg">
-            Projects
+        <div class="home-hero__cta" style={{"display": 'flex',
+    "justifyContent": 'center',
+    "alignItems": 'center',
+    "gap": '16px',
+    "padding": '20px'}}>
+          <a href="/files/resume.pdf" class="btn btn--med" download>
+            Resume PDF
+          </a>
+          <a href="mailto:rajarshig007@gmail.com" class="btn btn--med">
+            Contact Me
           </a>
         </div>
       </div>

@@ -313,7 +313,7 @@ const SkillsAboutSection = () => {
     };
 
     return (
-        <div className='about sec-pad'>
+        <div className='about sec-pad' id='about'>
             {/* About Section */}
             <div className='main-container'>
                 <div style={styles.textCenter}>
