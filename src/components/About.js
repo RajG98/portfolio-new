@@ -45,15 +45,18 @@ const styles = {
         cursor: 'pointer'
     },
     highlightDot: {
-        width: '8px',
-        height: '8px',
-        backgroundColor: '#1f2937',
-        borderRadius: '50%',
-        flexShrink: 0
+      width: '8px',
+      height: '8px',
+      backgroundColor: '#374151',
+      borderRadius: '50%',
+      marginRight: '16px',
+      flexShrink: 0,
+      transition: 'all 0.3s ease'
     },
     highlightText: {
-        color: '#374151',
-        fontWeight: '500'
+      color: '#374151',
+      lineHeight: '1.5',
+      transition: 'all 0.3s ease'
     },
     skillsGrid: {
         display: 'grid',
@@ -329,14 +332,44 @@ const SkillsAboutSection = () => {
                 <div style={styles.highlightsGrid}>
                     {aboutContent.highlights.map((highlight, index) => (
                         <div
-                            key={index}
-                            style={styles.highlightItem}
-                            onMouseEnter={(e) => e.target.style.backgroundColor = '#f3f4f6'}
-                            onMouseLeave={(e) => e.target.style.backgroundColor = '#fafafa'}
-                        >
-                            <div style={styles.highlightDot}></div>
-                            <span style={styles.highlightText}>{highlight}</span>
-                        </div>
+            key={`inline-${index}`}
+            style={{
+              ...styles.highlightItem,
+              transition: 'all 0.3s ease',
+              cursor: 'pointer'
+            }}
+            onMouseEnter={(e) => {
+              const item = e.currentTarget;
+              item.style.backgroundColor = '#f3f4f6';
+              item.style.transform = 'translateX(12px)';
+              item.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+              item.style.borderColor = '#d1d5db';
+              
+              // Animate the dot
+              const dot = item.querySelector('.dot');
+              if (dot) {
+                dot.style.backgroundColor = '#000';
+                dot.style.transform = 'scale(1.2)';
+              }
+            }}
+            onMouseLeave={(e) => {
+              const item = e.currentTarget;
+              item.style.backgroundColor = '#fafafa';
+              item.style.transform = 'translateX(0)';
+              item.style.boxShadow = 'none';
+              item.style.borderColor = '#e5e7eb';
+              
+              // Reset the dot
+              const dot = item.querySelector('.dot');
+              if (dot) {
+                dot.style.backgroundColor = '#374151';
+                dot.style.transform = 'scale(1)';
+              }
+            }}
+          >
+            <div className="dot" style={styles.highlightDot}></div>
+            <span style={styles.highlightText}>{highlight}</span>
+          </div>
                     ))}
                 </div>
             </div>
