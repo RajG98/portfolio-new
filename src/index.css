@@ -382,6 +382,9 @@ textarea {
   line-height: 1.7;
   margin-bottom: 1rem;
 }
+.skills-section{
+  padding-top:12rem; 
+}
 
 .about__content-details-para--hl {
   font-weight: 700;
@@ -724,7 +727,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 5rem;
+  padding: 1rem 3.5rem;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -912,7 +915,7 @@ textarea {
 
 @media only screen and (max-width: 37.5em) {
   .home-hero__cta {
-    flex-direction: column ;
+    flex-direction: column;
     gap: 12px;
   }
 }

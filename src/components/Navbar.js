@@ -24,6 +24,9 @@ export const Navbar = () => {
               <a href="#about" class="header__link">About </a>
             </li>
             <li class="header__link-wrapper">
+              <a href="#skills" class="header__link"> Skills </a>
+            </li>
+            <li class="header__link-wrapper">
               <a href="#projects" class="header__link">
                 Projects
               </a>
@@ -46,6 +49,9 @@ export const Navbar = () => {
 
               <li class="header__sm-menu-link">
                 <a href="#about"> About </a>
+              </li>
+              <li class="header__sm-menu-link">
+                <a href="#skills"> Skills </a>
               </li>
 
               <li class="header__sm-menu-link">

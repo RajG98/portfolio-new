@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code, Database, Globe, Smartphone, Server, Palette, GitBranch, Terminal, Layers, Zap } from 'lucide-react';
+import { Code, Database, Server, GitBranch, Terminal, Layers,Coffee,Leaf,Boxes,Container } from 'lucide-react';
 
 const styles = {
     aboutSection: {
@@ -190,85 +190,85 @@ const SkillsAboutSection = () => {
     const [hoveredSkill, setHoveredSkill] = useState(null);
 
     const skills = [
-        {
-            name: 'JavaScript',
-            icon: Code,
-            level: 90,
-            description: 'ES6+, Modern JavaScript, Async/Await, Promises',
-            category: 'Frontend'
-        },
-        {
-            name: 'React.js',
-            icon: Layers,
-            level: 85,
-            description: 'Hooks, Context API, Redux, Component Architecture',
-            category: 'Frontend'
-        },
-        {
-            name: 'Node.js',
-            icon: Server,
-            level: 80,
-            description: 'Express.js, REST APIs, Middleware, Authentication',
-            category: 'Backend'
-        },
-        {
-            name: 'Database',
-            icon: Database,
-            level: 75,
-            description: 'MongoDB, MySQL, PostgreSQL, Data Modeling',
-            category: 'Backend'
-        },
-        {
-            name: 'HTML/CSS',
-            icon: Globe,
-            level: 95,
-            description: 'Semantic HTML, CSS Grid, Flexbox, Animations',
-            category: 'Frontend'
-        },
-        {
-            name: 'Mobile Dev',
-            icon: Smartphone,
-            level: 70,
-            description: 'React Native, Responsive Design, PWA',
-            category: 'Mobile'
-        },
-        {
-            name: 'UI/UX Design',
-            icon: Palette,
-            level: 80,
-            description: 'Figma, Adobe XD, User Research, Prototyping',
-            category: 'Design'
-        },
-        {
-            name: 'Git/GitHub',
-            icon: GitBranch,
-            level: 85,
-            description: 'Version Control, Branching, Code Review, CI/CD',
-            category: 'Tools'
-        },
-        {
-            name: 'DevOps',
-            icon: Terminal,
-            level: 65,
-            description: 'Docker, AWS, Linux, Deployment Automation',
-            category: 'Tools'
-        },
-        {
-            name: 'Performance',
-            icon: Zap,
-            level: 75,
-            description: 'Optimization, Bundle Analysis, Caching, SEO',
-            category: 'Frontend'
-        }
-    ];
+    {
+        name: 'Java',
+        icon: Coffee,
+        level: 90,
+        description: 'Core Java, OOP, Collections, Multithreading, JVM',
+        category: 'Backend'
+    },
+    {
+        name: 'Spring Boot',
+        icon: Leaf,
+        level: 85,
+        description: 'REST APIs, Security, JPA/Hibernate, Microservices Architecture',
+        category: 'Backend'
+    },
+    {
+        name: 'Microservices',
+        icon: Boxes,
+        level: 80,
+        description: 'Service Discovery, API Gateway, Circuit Breaker, Event-Driven',
+        category: 'Backend'
+    },
+    {
+        name: 'Docker',
+        icon: Container,
+        level: 75,
+        description: 'Containerization, Docker Compose, Multi-stage Builds',
+        category: 'DevOps'
+    },
+    {
+        name: 'Database',
+        icon: Database,
+        level: 85,
+        description: 'PostgreSQL, MongoDB, Redis, Query Optimization, Transactions',
+        category: 'Backend'
+    },
+    {
+        name: 'Node.js',
+        icon: Server,
+        level: 80,
+        description: 'Express.js, REST APIs, Middleware, Authentication',
+        category: 'Backend'
+    },
+    {
+        name: 'JavaScript',
+        icon: Code,
+        level: 90,
+        description: 'ES6+, Async/Await, Promises, Node.js Runtime',
+        category: 'Backend'
+    },
+    {
+        name: 'DevOps',
+        icon: Terminal,
+        level: 70,
+        description: 'AWS, Kubernetes, CI/CD Pipelines, Infrastructure as Code',
+        category: 'DevOps'
+    },
+    {
+        name: 'Git/GitHub',
+        icon: GitBranch,
+        level: 85,
+        description: 'Version Control, Branching Strategies, Code Review, Actions',
+        category: 'Tools'
+    },
+    {
+        name: 'React.js',
+        icon: Layers,
+        level: 75,
+        description: 'Component Architecture, Hooks, State Management',
+        category: 'Frontend'
+    }
+];
 
     const aboutContent = {
         title: "About Me",
-        description: "I bring enthusiasm and a futuristic approach to every project I am a part of. I live for changing ideas into reality, even more so if it involves a puzzle or challenge. My apps include unit tests, UI tests, scalable architectures, and design patterns, well-documented, easy-to-read code, and automated deployment to the App Store.",
+        description: "I'm a Systems Engineer at TCS specializing in full-stack development with expertise in Java, Spring Boot, and React.js. I build scalable enterprise applications and robust backend systems using modern technologies like Docker and MySQL. With hands-on experience in RESTful API development and database management, I'm passionate about creating efficient, maintainable solutions that solve real-world business challenges through clean, innovative code.",
         highlights: [
-            "3+ years of professional development experience",
-            "Specialized in React.js and Node.js ecosystems",
-            "Strong focus on performance and user experience",
+            "0.5+ years of professional development experience",
+            "Specialized in React.js and Spring Boot ecosystems",
+            "Strong focus on performance and scalability",
             "Collaborative team player with leadership experience"
         ]
     };
@@ -375,7 +375,7 @@ const SkillsAboutSection = () => {
             </div>
 
             {/* Skills Section */}
-            <div className='about sec-pad main-container'>
+            <div className='skills-section main-container' id='skills'>
                 <div style={styles.textCenter}>
                     <h2 style={styles.title}>
                         Technical Skills
